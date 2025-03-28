@@ -24,10 +24,6 @@ class NciAlmanacDataset(Dataset):
 
     def get_splitted_data(self,data_folder, split):
         full_dataset = pd.read_csv(data_folder)
-        keep = full_dataset['alpha_mean'] <= 100
-        full_dataset = full_dataset[keep]
-        keep = np.logical_and(full_dataset['dHSA_mean'] <= 50, full_dataset['dHSA_mean'] >= - 50)
-        full_dataset = full_dataset[keep]
 
         #filter based on train-validation-test splits
         split_column = 'split'
