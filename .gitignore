@@ -1,0 +1,4 @@
+data/
+figures/
+wandb_dir/ 
+__pycache__/ 
